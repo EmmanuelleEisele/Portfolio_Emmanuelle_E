@@ -1,9 +1,20 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Home from './pages/hompage.jsx'
+import About from './pages/about.jsx'
+import NotFound from './pages/notfound.jsx'
+import Navbar from './components/Navbar.jsx'
+
 export default function App() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <h1 className="text-5xl font-bold text-green-500">
-        Hello Tailwind v3 🚀
-      </h1>
-    </div>
-  )
+<>
+<Router>
+  <Navbar />
+  <Routes>
+    <Route path="/" element={<Home />} />
+    <Route path="/about" element={<About />} />
+    <Route path="*" element={<NotFound />} />
+  </Routes>
+</Router>
+</>  
+)
 }
