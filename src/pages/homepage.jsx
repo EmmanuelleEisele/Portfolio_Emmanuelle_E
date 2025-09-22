@@ -5,7 +5,10 @@ export default function Home() {
     const aboutSection = document.getElementById("about-section");
     aboutSection.scrollIntoView({ behavior: "smooth" });
   };
-
+  const scrollToProjects = () => {
+    const projectsSection = document.getElementById("projects-section");
+    projectsSection.scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <>
       {/* Section Hero */}
@@ -36,34 +39,45 @@ export default function Home() {
         className="bg-gray-600 min-h-screen p-8 flex flex-col justify-center items-center"
       >
         <div className="max-w-4xl mx-auto text-center">
-          <section class="pt-12">
-            <div class="bg-[#c2d4efab] mx-auto w-full relative flex justify-around items-center rounded-2xl">
-              <img src="/src/assets/IMG-20250922-WA0013.png" alt=""  className="w-fill h-[447px] object-cover rounded-[3px]" />
-              <div class="w-fill h-[447px] rounded-[3px]">
-                <h2 class=" text-[rgb(34,42,79)] text-3xl font-bold font-['Poppins'] leading-[60px]">
+          <section className="pt-12">
+            <div className="bg-[#b4ccf063] mx-auto w-full relative flex justify-center items-center rounded-2xl h-[500px]">
+              <img src="/src/assets/IMG-20250922-WA0013.png" alt="photo de Emmanuelle Eiselé"  className="w-fill h-[500px] object-cover rounded-[3px]" />
+              <div className="w-fill h-[447px] rounded-[3px]">
+                <h2 className=" text-[rgb(34,42,79)] text-3xl font-bold font-['Poppins'] leading-[60px]">
                   Developpeuse Web & Mobile
                 </h2>
-                <p class="w-auto text-[rgb(34,42,79)] text-base font-medium font-['Poppins'] leading-9">
+                <p className="w-auto text-[rgb(34,42,79)] text-base font-medium font-['Poppins'] leading-9">
                   Je suis une développeuse web et mobile passionnée par la création
                   d'expériences numériques innovantes et intuitives.
                 </p>
-                <div class="flex gap-9 my-10 font-['Poppins'] justify-center">
-                  <div class="w-[100px] h-[100px] text-center py-4 bg-white rounded-[3px] shadow-[0px_7px_30px_0px_rgba(0,0,0,0.05)] text-[rgb(34,42,79)] text-md font-semibold">
-                      REACT
+                <div className="flex gap-9 my-10 font-['Poppins'] justify-center">
+                  <div className="w-[100px] h-[100px] text-center py-4 bg-white rounded-2xl shadow-[0px_7px_30px_0px_rgba(0,0,0,0.05)] text-[rgb(34,42,79)] text-md font-semibold flex items-center justify-center flex-col hover:rounded-[40%_60%_30%_70%/60%_30%_70%_40%] transition-all ease-in-out duration-[1000ms]">
+                     <p className="inline">REACT</p>
+                     <p className="inline">JS</p>
                   </div>
-                  <div class="w-[100px] h-[100px] text-center py-4 bg-white rounded-[3px] shadow-[0px_7px_30px_0px_rgba(0,0,0,0.05)] text-[rgb(34,42,79)] text-md font-semibold">
-                      NODE.JS
+                  <div className="w-[100px] h-[100px] text-center py-4 bg-white rounded-2xl shadow-[0px_7px_30px_0px_rgba(0,0,0,0.05)] text-[rgb(34,42,79)] text-md font-semibold flex items-center justify-center flex-col hover:rounded-[40%_60%_30%_70%/60%_30%_70%_40%] transition-all ease-in-out duration-[1000ms]">
+                      <p className="inline">NODE.JS</p>
+                      <p className="inline">EXPRESS</p>
                   </div>
-                  <div class="w-[100px] h-[100px] text-center py-4 bg-white rounded-[3px] shadow-[0px_7px_30px_0px_rgba(0,0,0,0.05)] text-[rgb(34,42,79)] text-md font-semibold">
-                      PSQL
+                  <div className="w-[100px] h-[100px] text-center py-4 bg-white rounded-2xl shadow-[0px_7px_30px_0px_rgba(0,0,0,0.05)] text-[rgb(34,42,79)] text-md font-semibold flex items-center justify-center flex-col hover:rounded-[40%_60%_30%_70%/60%_30%_70%_40%] transition-all ease-in-out duration-[1000ms]">
+                      <p className="inline">PSQL</p>
+                      <p className="inline">SEQUELIZE</p>
                   </div>
                 </div>
-                <button class=" px-16 py-5   bg-[rgb(34,42,79)] rounded-md shadow-[0px_7px_30px_0px_rgba(0,0,0,0.05)]   text-white text-xl font-medium font-['Poppins'] uppercase">
+                <button className=" px-16 py-5   bg-[rgb(34,42,79)] rounded-md shadow-[0px_7px_30px_0px_rgba(0,0,0,0.05)]   text-white text-xl font-medium font-['Poppins'] uppercase" onClick={scrollToProjects}>
                   Les projets
                 </button>
               </div>
             </div>
           </section> 
+        </div>
+        {/* Section Projects */ }
+        <div id="projects-section"
+                className="bg-gray-600 min-h-screen p-8 flex flex-col justify-center items-center"
+ >
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl font-bold mb-8 text-white">Mes Projets</h2>  
+          </div>
         </div>
       </div>
     </>
