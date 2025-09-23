@@ -71,7 +71,7 @@ export default function Home() {
                     </div>
                   </div>
                   <button
-                    className="mb-4 hover:rounded-[40%_60%_30%_70%/60%_30%_70%_40%] transition-all ease-in-out duration-[500ms] px-16 py-4 bg-[rgb(34,42,79)] rounded-md shadow-[0px_7px_30px_0px_rgba(0,0,0,0.05)]   text-white text-xl font-medium font-['Poppins'] uppercase m-4 md:m-0 "
+                    className="hover:rounded-[40%_60%_30%_70%/60%_30%_70%_40%] transition-all ease-in-out duration-[500ms] px-16 py-4 bg-[rgb(34,42,79)] rounded-md shadow-[0px_7px_30px_0px_rgba(0,0,0,0.05)]   text-white text-xl font-medium font-['Poppins'] uppercase m-4  "
                     onClick={scrollToProjects}
                   >
                     Mes projets

@@ -25,10 +25,10 @@ export default function Carousel() {
   };
 
   return (
-    <section className="max-w-6xl mx-auto">
+    <section className="max-w-6xl mx-auto font-['Poppins']">
       <div className="text-center mb-4">
         <p className="text-white max-w-2xl mx-auto ">
-          Découvrez une sélection de mes projets de développement web et mobile
+          Découvrez une sélection de mes projets de développement web en ligne
         </p>
       </div>
 
