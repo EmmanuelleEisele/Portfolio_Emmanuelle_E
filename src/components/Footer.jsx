@@ -12,8 +12,8 @@ export default function Footer() {
       <Link href="https://www.linkedin.com/in/emmanuelle-eiselé-b5560a341" target="_blank">
       <SiLinkedin className="inline-block mr-2" size={24} />
       </Link>
-
       </div>
+      <Link>Mentions Légales</Link>
       <p>© 2025 Mon Site Web. Tous droits réservés.</p>
     </footer>
   )

@@ -49,7 +49,7 @@ export default function Carousel() {
         </button>
 
         {/* Carousel content */}
-        <div className="relative h-[400px] md:h-[500px] overflow-hidden">
+        <div className="relative h-[400px] md:h-[500px] overflow-hidden" >
           {projects.map((project, index) => (
             <div
               key={project.id}
@@ -93,7 +93,7 @@ export default function Carousel() {
                         {project.techno.map((tech, i) => (
                           <span
                             key={i}
-                            className=" bg-gradient-to-r from-blue-50 to-indigo-50 text-[rgb(34,42,79)] px-3 py-1 rounded-lg text-[0.8rem] md:text-sm font-medium border border-blue-100"
+                            className=" bg-blue-50 text-[rgb(34,42,79)] px-3 py-1 rounded-lg text-[0.8rem] md:text-sm font-medium border border-blue-100"
                           >
                             {tech}
                           </span>
