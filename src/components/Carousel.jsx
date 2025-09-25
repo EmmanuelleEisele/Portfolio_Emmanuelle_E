@@ -7,15 +7,15 @@ import { Link } from "react-router-dom";
 export default function Carousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const projects = projectsData;
-  
+
   const nextSlide = () => {
-    setCurrentIndex((prevIndex) => 
+    setCurrentIndex((prevIndex) =>
       prevIndex === projects.length - 1 ? 0 : prevIndex + 1
     );
   };
 
   const prevSlide = () => {
-    setCurrentIndex((prevIndex) => 
+    setCurrentIndex((prevIndex) =>
       prevIndex === 0 ? projects.length - 1 : prevIndex - 1
     );
   };
@@ -25,12 +25,10 @@ export default function Carousel() {
   };
 
   return (
-    <section className="max-w-6xl mx-auto font-['Poppins']">
-      <div className="text-center mb-4">
-        <p className="text-white max-w-2xl mx-auto ">
-          Découvrez une sélection de mes projets de développement web en ligne
-        </p>
-      </div>
+    <section className=" mx-auto font-['Poppins'] ">
+      <p className="text-white max-w-2xl mx-auto text-center mb-4">
+        Découvrez une sélection de mes projets de développement web en ligne
+      </p>
 
       <div className="relative bg-white rounded-2xl shadow-xl overflow-hidden">
         {/* Navigation arrows */}
@@ -40,7 +38,7 @@ export default function Carousel() {
         >
           <BiChevronLeft className="w-6 h-6 text-gray-700 group-hover:text-white" />
         </button>
-        
+
         <button
           onClick={nextSlide}
           className="absolute right-1 top-1/2 transform -translate-y-1/2 z-10 bg-gray-600/15 backdrop-blur-sm hover:bg-white/25 transition-all duration-200 rounded-full p-3 shadow-lg hover:shadow-xl group"
@@ -49,22 +47,22 @@ export default function Carousel() {
         </button>
 
         {/* Carousel content */}
-        <div className="relative h-[400px] md:h-[500px] overflow-hidden" >
+        <div className="relative h-[400px] md:h-[500px] xl:h-[700px] overflow-hidden">
           {projects.map((project, index) => (
             <div
               key={project.id}
               className={`absolute inset-0 transition-transform duration-500 ease-in-out ${
                 index === currentIndex
-                  ? 'translate-x-0'
+                  ? "translate-x-0"
                   : index < currentIndex
-                  ? '-translate-x-full'
-                  : 'translate-x-full'
+                  ? "-translate-x-full"
+                  : "translate-x-full"
               }`}
             >
               {/* Carousel slide content */}
-              <div className="flex flex-col h-full  bg-gray-300">
+              <div className="flex flex-col h-full bg-gray-300">
                 {/* Image en haut */}
-                <div className="w-full h-48 md:h-64 relative overflow-hidden">
+                <div className="w-full h-1/2 relative overflow-hidden">
                   <img
                     src={project.image}
                     alt={project.title}
@@ -73,13 +71,13 @@ export default function Carousel() {
                 </div>
 
                 {/* Content en bas */}
-                <div className="p-4 md:px-8 md:pb-4 md:pt-2 flex flex-col flex-end h-1/2">
-                  <div>
-                    <h3 className="text-md md:text-2xl font-bold text-gray-900 ">
+                <div className="px-4 md:px-8 md:pb-4 md:pt-2 h-1/2 flex flex-col">
+                  <div className="flex-1">
+                    <h3 className="text-md md:text-2xl lg:text-3xl font-bold text-gray-900 mb-2">
                       {project.title}
                     </h3>
-                    
-                    <p className="text-gray-700 mb-2 leading-relaxed text-sm md:text-base">
+
+                    <p className="text-gray-700 mb-4 leading-relaxed text-sm md:text-base lg:text-lg">
                       {project.description}
                     </p>
 
@@ -87,13 +85,15 @@ export default function Carousel() {
                     <div className="mb-4">
                       <div className="flex items-center mb-2">
                         <FiCode className="w-5 h-5 text-gray-900 mr-2" />
-                        <span className="font-semibold text-gray-900 text-sm md:text-base">Technologies</span>
+                        <span className="font-semibold text-gray-900 text-sm md:text-base">
+                          Technologies
+                        </span>
                       </div>
-                      <div className="flex md:flex-wrap gap-2 overflow-scroll">
+                      <div className="flex flex-wrap gap-2">
                         {project.techno.map((tech, i) => (
                           <span
                             key={i}
-                            className=" bg-blue-50 text-[rgb(34,42,79)] px-3 py-1 rounded-lg text-[0.8rem] md:text-sm font-medium border border-blue-100"
+                            className="bg-blue-50 text-[rgb(34,42,79)] px-3 py-1 rounded-lg text-[0.8rem] md:text-sm font-medium border border-blue-100"
                           >
                             {tech}
                           </span>
@@ -128,8 +128,8 @@ export default function Carousel() {
               onClick={() => goToSlide(index)}
               className={`w-2 h-2 rounded-full transition-all duration-200 ${
                 index === currentIndex
-                  ? 'bg-[rgb(34,42,79)] scale-125'
-                  : 'bg-white'
+                  ? "bg-[rgb(34,42,79)] scale-125"
+                  : "bg-white"
               }`}
             />
           ))}
