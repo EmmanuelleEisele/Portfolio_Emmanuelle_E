@@ -13,7 +13,7 @@ export default function Footer() {
       <SiLinkedin className="inline-block mr-2" size={24} />
       </Link>
       </div>
-      <Link>Mentions Légales</Link>
+      <Link to="/mentions-legales">Mentions Légales</Link>
       <p>© 2025 Mon Site Web. Tous droits réservés.</p>
     </footer>
   )

@@ -40,18 +40,67 @@ export default function Home() {
                   création d'expériences numériques innovantes et intuitives.
                 </p>
                 <div className="flex flex-col justify-center items-center md:flex-row gap-2 md:gap-9 my-4 md:my-10 font-['Poppins']">
-                  <div className="w-[100px] h-[100px] text-center  md:py-4 bg-white rounded-2xl shadow-[0px_7px_30px_0px_rgba(0,0,0,0.05)] text-gray-900 text-md font-semibold flex items-center justify-center flex-col hover:rounded-[40%_60%_30%_70%/60%_30%_70%_40%] transition-all ease-in-out duration-[500ms]">
+                  <motion.div
+                    animate={{
+                      borderRadius: [
+                        "40% 60% 30% 70% / 60% 30% 70% 40%", // Forme organique 1
+                        "60% 40% 40% 60% / 60% 60% 60% 40%", // Forme organique 2
+                        "30% 50% 50% 50% / 50% 30% 70% 50%", // Forme organique 3
+                        "40% 60% 30% 70% / 60% 30% 70% 40%", // Forme organique 4
+                      ],
+                    }}
+                    transition={{
+                      duration: 4,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                      repeatType: "loop",
+                    }}
+                    className="w-[100px] h-[100px] text-center  md:py-4 bg-white rounded-2xl shadow-[0px_7px_30px_0px_rgba(0,0,0,0.05)] text-gray-900 text-md font-semibold flex items-center justify-center flex-col"
+                  >
                     <p className="inline">REACT</p>
                     <p className="inline">JS</p>
-                  </div>
-                  <div className="w-[100px] h-[100px] text-center md:py-4 bg-white rounded-2xl shadow-[0px_7px_30px_0px_rgba(0,0,0,0.05)] text-gray-900 text-md font-semibold flex items-center justify-center flex-col hover:rounded-[40%_60%_30%_70%/60%_30%_70%_40%] transition-all ease-in-out duration-[500ms]">
+                  </motion.div>
+                  <motion.div
+                    animate={{
+                      borderRadius: [
+                        "40% 60% 30% 70% / 60% 30% 70% 40%", // Forme organique 1
+                        "60% 40% 40% 60% / 50% 60% 40% 40%", // Forme organique 2
+                        "30% 70% 50% 50% / 50% 30% 70% 50%", // Forme organique 3
+                        "40% 60% 30% 70% / 60% 30% 70% 40%", // Forme organique 4
+                      ],
+                    }}
+                    transition={{
+                      duration: 4,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                      repeatType: "loop",
+                      delay: 1,
+                    }}
+                    className="w-[100px] h-[100px] text-center md:py-4 bg-white rounded-2xl shadow-[0px_7px_30px_0px_rgba(0,0,0,0.05)] text-gray-900 text-md font-semibold flex items-center justify-center flex-col">
                     <p className="inline">NODE.JS</p>
                     <p className="inline">EXPRESS</p>
-                  </div>
-                  <div className="w-[100px] h-[100px] text-center md:py-4 bg-white rounded-2xl shadow-[0px_7px_30px_0px_rgba(0,0,0,0.05)] text-gray-900 text-md font-semibold flex items-center justify-center flex-col hover:rounded-[40%_60%_30%_70%/60%_30%_70%_40%] transition-all ease-in-out duration-[500ms]">
+                  </motion.div>
+                  <motion.div
+                    animate={{
+                      borderRadius: [
+                        "40% 60% 30% 70% / 40% 30% 70% 40%", // Forme organique 1
+                        "30% 70% 50% 50% / 50% 30% 70% 60%", // Forme organique 3
+                        "60% 40% 40% 60% / 50% 60% 60% 40%", // Forme organique 2
+                        "45% 60% 30% 70% / 40% 30% 70% 45%", // Forme organique 4
+                      ],
+                    }}
+                    transition={{
+                      duration: 4,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                      repeatType: "loop",
+                      delay: 2,
+                    }}
+                    className="w-[100px] h-[100px] text-center md:py-4 bg-white rounded-2xl shadow-[0px_7px_30px_0px_rgba(0,0,0,0.05)] text-gray-900 text-md font-semibold flex items-center justify-center flex-col"
+                  >
                     <p className="inline">PSQL</p>
                     <p className="inline">SEQUELIZE</p>
-                  </div>
+                  </motion.div>
                 </div>
                 <button
                   className="hover:rounded-[40%_60%_30%_70%/60%_30%_70%_40%] transition-all ease-in-out duration-[500ms] px-8 md:px-16 py-2 md:py-4 bg-[rgb(34,42,79)] rounded-md shadow-[0px_7px_30px_0px_rgba(0,0,0,0.05)] text-white text-lg md:text-xl font-medium font-['Poppins'] uppercase mb-2 md:m-4"
@@ -126,7 +175,12 @@ export default function Home() {
         <div className="flex justify-center flex-col items-center my-8 bg-gray-800 text-white p-8 mx-4 rounded-2xl">
           <motion.div
             animate={{ rotate: [0, 15, -15, 0], opacity: [1, 0.7, 0.7, 1] }}
-            transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut", repeatType: "loop" }}
+            transition={{
+              duration: 2.5,
+              repeat: Infinity,
+              ease: "easeInOut",
+              repeatType: "loop",
+            }}
             className="mb-8"
           >
             <FaHandshake className="text-blue-300 text-3xl" size={45} />

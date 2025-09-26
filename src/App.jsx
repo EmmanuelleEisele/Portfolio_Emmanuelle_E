@@ -7,9 +7,12 @@ import Navbar from './components/Navbar.jsx'
 import Footer from './components/Footer.jsx'
 import LandingPage from './pages/landingPage.jsx'
 import Contact from './pages/contact.jsx'
+import ProjectDetail from './pages/project_detail.jsx'
+import MentionsLegales from './pages/legal.jsx'
 
 function AnimatedRoutes() {
   const location = useLocation()
+  
 
   return (
     <AnimatePresence mode="wait">
@@ -18,18 +21,31 @@ function AnimatedRoutes() {
         <Route path="/home" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/project/:id" element={<ProjectDetail />} />
+        <Route path="/mentions-legales" element={<MentionsLegales />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </AnimatePresence>
   )
 }
 
+function AppContent() {
+  const location = useLocation()
+  const isLandingPage = location.pathname === '/'
+
+  return (
+    <>
+      {!isLandingPage && <Navbar />}
+      <AnimatedRoutes />
+      {!isLandingPage && <Footer />}
+    </>
+  )
+}
+
 export default function App() {
   return (
     <Router>
-      <Navbar />
-      <AnimatedRoutes />
-      <Footer />
+      <AppContent />
     </Router>
   )
 }
