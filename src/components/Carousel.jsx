@@ -106,7 +106,6 @@ export default function Carousel() {
                   <div className="flex justify-center gap-4 mt-auto">
                     <Link
                       to={`/project/${project.id}`}
-                      target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center mb-4 gap-2 bg-[rgb(34,42,79)] hover:bg-[rgb(52,65,122)] hover:scale-105 ease-in-out transition-transform duration-200 text-white px-4 py-2 rounded-lg"
                     >

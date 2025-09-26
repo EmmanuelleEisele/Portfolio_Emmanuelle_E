@@ -1,18 +1,6 @@
 export const projectsData = [
   {
     id: 1,
-    title: "Portfolio",
-    description: "Site vitrine des projets réalisés par le client.",
-    objectif: "Bénévolat, création d'un site vitrine.",
-    detail: "Création d'un site vitrine portfolio pour un graphiste 3D freelance afin de présenter ses projets et compétences. Le site est conçu pour être responsive et optimisé pour le référencement.",
-    functions: "Dans ce projet, j'ai été responsable de la conception, du développement et du déploiement du site web. J'ai travaillé en étroite collaboration avec le client pour comprendre ses besoins et créer un design qui reflète son style unique.J'ai notemment fais de ma priorité la bonne visualisation des images, l'accessibilité et le SEO.",
-    image: "/src/assets/portfolio_we.png",
-    link: "https://www.williameisele.fr/",
-    techno: ["React", "Tailwind", "JavaScript", "Vercel"],
-    role: ["Développeuse front-end", "Intégration", "Design", "SEO", "Déploiement front-end"],
-  },
-  {
-    id: 2,
     title: "SeniorLove",
     description: "Un site de rencontres pour les + 60 ans.",
     objectif: "Projet de fin de formation réalisé en équipe et présenté lors d'une soutenance devant un jury.",
@@ -22,6 +10,18 @@ export const projectsData = [
     link: "https://seniorlove-zeta.vercel.app/",
     techno: ["React", "Node.js", "Express", "PostgreSQL", "Sequelize", "Axios", "JWT", "Vercel", "Render"],
     role: ["SCRUM Master", "Développeuse Front-end", "Développeuse back-end", "Design", "Déploiement back-end"],
+  },
+  {
+    id: 2,
+    title: "Portfolio",
+    description: "Site vitrine des projets réalisés par le client.",
+    objectif: "Bénévolat, création d'un site vitrine.",
+    detail: "Création d'un site vitrine portfolio pour un graphiste 3D freelance afin de présenter ses projets et compétences. Le site est conçu pour être responsive et optimisé pour le référencement.",
+    functions: "Dans ce projet, j'ai été responsable de la conception, du développement et du déploiement du site web. J'ai travaillé en étroite collaboration avec le client pour comprendre ses besoins et créer un design qui reflète son style unique.J'ai notemment fais de ma priorité la bonne visualisation des images, l'accessibilité et le SEO.",
+    image: "/src/assets/portfolio_we.png",
+    link: "https://www.williameisele.fr/",
+    techno: ["React", "Tailwind", "JavaScript", "Vercel"],
+    role: ["Développeuse front-end", "Intégration", "Design", "SEO", "Déploiement front-end"],
   },
   {
     id: 3,
