@@ -14,10 +14,10 @@ export default function Contact() {
       <p>Vous pouvez me joindre via les moyens suivants :</p>
       
       <Link
-        to="mailto:emmanuelle@example.com"
+        to="mailto:emmanuelle.eisele@outlook.com"
         className="hover:text-blue-400 hover:underline flex flex-row items-center gap-2"
       >
-       <IoMailOutline/> emmanuelle@example.com
+       <IoMailOutline/> emmanuelle.eisele@outlook.com
       </Link>
       <Link
         to="tel:+33 7 81 40 13 71"

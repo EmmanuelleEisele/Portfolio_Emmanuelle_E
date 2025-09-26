@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 export default function About() {
   return (
-    <motion.div className="project-detail-page max-w-6xl mx-auto bg-gray-700 min-h-screen gap-4 text-white p-4 pt-20">
+    <motion.div className="project-detail-page max-w-4xl mx-auto bg-gray-700 min-h-screen gap-4 text-white p-4 pt-20">
       <section className="bg-gray-800 p-6 rounded-lg shadow-lg w-full text-center flex flex-col gap-4 mb-4">
         <h1 className="text-4xl font-bold">Mon Profil</h1>
         <h2 className="text-xl">Emmanuelle Eiselé</h2>
@@ -145,7 +145,7 @@ export default function About() {
                       <i class="fas fa-check-circle text-white"></i>
                     </div>
                   </div>
-                  <div class="bg-gray-300  col-start-4 col-end-12 p-4 rounded-xl my-4 mr-auto shadow-md w-full">
+                  <div class="bg-gray-50  col-start-4 col-end-12 p-4 rounded-xl my-4 mr-auto shadow-md w-full">
                     <h3 class="font-semibold text-lg mb-1">
                       Obtention du Titre professionnel DWWM - niveau 5
                     </h3>

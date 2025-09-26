@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function MentionsLegales() {
   return (
     <div className="bg-gray-700 min-h-screen py-16">
@@ -17,13 +19,13 @@ export default function MentionsLegales() {
                 <strong>Nom :</strong> Emmanuelle Eiselé
               </p>
               <p className="mb-2">
-                <strong>Statut :</strong> Développeuse Web & Mobile - Auto-entrepreneur
+                <strong>Statut :</strong> Développeuse Web & Mobile 
               </p>
               <p className="mb-2">
-                <strong>Email :</strong> [emmanuelle@exemple.com]
+                <strong>Email :</strong> emmanuelle@exemple.com
               </p>
               <p className="mb-2">
-                <strong>Téléphone :</strong> [Votre numéro]
+                <strong>Téléphone :</strong> +33 7 81 40 13 71
               </p>
             </section>
 
@@ -123,9 +125,9 @@ export default function MentionsLegales() {
               <p>
                 Pour toute question concernant ces mentions légales, vous pouvez me contacter à :
               </p>
-              <p className="mt-2">
-                <strong>Email :</strong> [emmanuelle@exemple.com]
-              </p>
+              <Link to="mailto:emmanuelle.eisele@outlook.com" className="mt-2 hover:text-blue-500">
+                <strong>Email :</strong> emmanuelle.eisele@outlook.com
+              </Link>
             </section>
           </div>
 
