@@ -1,11 +1,15 @@
-import { LuArrowDown } from "react-icons/lu";
+import { LuArrowDown, LuEye, LuEyeClosed } from "react-icons/lu";
 import Carousel from "../components/Carousel";
 import futurProjectsData from "../data/futurProjects";
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
-import { FaBriefcase, FaHandshake } from "react-icons/fa";
+import { FaHandshake } from "react-icons/fa";
+import { Link } from "react-router-dom";
+
 
 export default function Home() {
+
+
   // scrolling to projects section
   const scrollToProjects = () => {
     const projectsSection = document.getElementById("projects-section");
@@ -35,10 +39,21 @@ export default function Home() {
                 <h2 className=" text-gray-900 p-2 md:p-0 text-lg md:text-3xl font-bold font-['Poppins'] md:leading-[60px]">
                   Developpeuse Web & Mobile
                 </h2>
-                <p className="w-auto text-gray-900 text-base font-medium font-['Poppins'] md:leading-9 px-1">
+                <p className="w-auto text-gray-900 text-base font-medium font-['Poppins'] md:leading-9 px-1 pb-2">
                   Je suis une développeuse web et mobile passionnée par la
                   création d'expériences numériques innovantes et intuitives.
-                </p>
+                </p>  
+                <div className="flex justify-center">
+                    <Link
+                    to="/about"
+                    className="flex flex-row justify-center items-center w-fit gap-2 px-2 py-1  bg-[rgb(34,42,79)] hover:bg-[rgb(34,32,79)]/80 rounded-md  text-white md:text-lg  font-['Poppins']"
+                    title="Voir mon profil"
+                  >
+                    Voir mon profil
+                  </Link>
+                </div>
+                
+                {/* Technologies animées */}
                 <div className="flex flex-col justify-center items-center md:flex-row gap-2 md:gap-9 my-4 md:my-10 font-['Poppins']">
                   <motion.div
                     animate={{
@@ -76,7 +91,8 @@ export default function Home() {
                       repeatType: "loop",
                       delay: 1,
                     }}
-                    className="w-[100px] h-[100px] text-center md:py-4 bg-white rounded-2xl shadow-[0px_7px_30px_0px_rgba(0,0,0,0.05)] text-gray-900 text-md font-semibold flex items-center justify-center flex-col">
+                    className="w-[100px] h-[100px] text-center md:py-4 bg-white rounded-2xl shadow-[0px_7px_30px_0px_rgba(0,0,0,0.05)] text-gray-900 text-md font-semibold flex items-center justify-center flex-col"
+                  >
                     <p className="inline">NODE.JS</p>
                     <p className="inline">EXPRESS</p>
                   </motion.div>
@@ -102,9 +118,11 @@ export default function Home() {
                     <p className="inline">SEQUELIZE</p>
                   </motion.div>
                 </div>
+                {/* Bouton vers section projets */}
                 <button
                   className="hover:rounded-[40%_60%_30%_70%/60%_30%_70%_40%] transition-all ease-in-out duration-[500ms] px-8 md:px-16 py-2 md:py-4 bg-[rgb(34,42,79)] rounded-md shadow-[0px_7px_30px_0px_rgba(0,0,0,0.05)] text-white text-lg md:text-xl font-medium font-['Poppins'] uppercase mb-2 md:m-4"
                   onClick={scrollToProjects}
+                  title="Voir mes projets"
                 >
                   Mes projets
                   <br />
