@@ -49,7 +49,7 @@ export default function Contact() {
 
           <p className="text-lg font-semibold text-green-400">
             <FaClock
-              className="inline-block mr-2 animate-spin ease-in-out duration-300 text-green-400"
+              className="inline-block mr-2 animate-spin ease-in-out text-green-400"
               size={24}
             />{" "}
             Disponible immédiatement
