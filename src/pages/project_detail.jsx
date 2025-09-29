@@ -1,4 +1,4 @@
-import { Link, useParams } from "react-router-dom";
+import { Link, Navigate, useParams } from "react-router-dom";
 import projectsData from "../data/projects";
 import { FiExternalLink } from "react-icons/fi";
 import BackButton from "../components/BackButton";
@@ -10,12 +10,7 @@ export default function ProjectDetail() {
   const project = projectsData.find((proj) => proj.id === parseInt(id));
 
   if (!project) {
-    return (
-      <div className="project-detail-page">
-        <h1>Project Not Found</h1>
-        <p>This project does not exist.</p>
-      </div>
-    );
+    return <Navigate to="/home" replace={true} />;
   }
 
   return (
@@ -23,71 +18,73 @@ export default function ProjectDetail() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="flex justify-center gap-4 flex-col md:flex-row project-detail-page max-w-6xl mx-auto bg-gray-700 min-h-screen  text-white p-4 pt-20 font-poppins leading-snug"
+      className=" project-detail-page max-w-6xl mx-auto bg-gray-700 min-h-screen  text-white p-4 pt-20 font-poppins leading-snug"
     >
       <BackButton />
-      <div className="bg-gray-800 p-6 rounded-lg shadow-lg w-full  ">
-        <h1 className="text-3xl font-bold text-white">{project.title}</h1>
-        <p>{project.description}</p>
-        <h2 className="py-2 text-xl font-bold">Le contexte</h2>
-        <p>{project.objectif}</p>
-        <h2 className="py-2 text-xl font-bold">
-          C'est quoi "{project.title}" ?
-        </h2>
-        <p>{project.detail}</p>
-        {/**Technologies Section */}
-        <section>
+      <section className="flex flex-col md:flex-row gap-4 md:gap-8 mt-2 md:mt-4">
+        <div className="bg-gray-900 p-6 rounded-lg shadow-lg w-full ">
+          <h1 className="text-3xl font-bold text-white">{project.title}</h1>
+          <p>{project.description}</p>
+          <h2 className="py-2 text-xl font-bold">Le contexte</h2>
+          <p>{project.objectif}</p>
+          <h2 className="py-2 text-xl font-bold">
+            C'est quoi "{project.title}" ?
+          </h2>
+          <p>{project.detail}</p>
+          {/**Technologies Section */}
+          <section>
+            <div className="flex flex-col gap-4 my-4">
+              <h2 className="font-bold text-xl">Technologies utilisées:</h2>
+              <div className="flex flex-wrap gap-2">
+                {project.techno.map((tech, index) => (
+                  <span
+                    key={index}
+                    className=" bg-blue-50 text-[rgb(34,42,79)] px-3 py-1 rounded-lg text-[0.8rem] md:text-sm font-semibold w-fit"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </section>
           <div className="flex flex-col gap-4 my-4">
-            <h2 className="font-bold text-xl">Technologies utilisées:</h2>
+            <h2 className="py-2 text-xl font-bold">Ce que j'ai fais:</h2>
+            <p>{project.functions}</p>
             <div className="flex flex-wrap gap-2">
-              {project.techno.map((tech, index) => (
+              {project.role.map((role, index) => (
                 <span
                   key={index}
-                  className=" bg-blue-50 text-[rgb(34,42,79)] px-3 py-1 rounded-lg text-[0.8rem] md:text-sm font-semibold w-fit"
+                  className=" bg-blue-50/50  hover:bg-blue-50/90 font-semibold text-[rgb(34,42,79)] px-3 py-1 rounded-lg text-[0.8rem] md:text-sm w-fit"
                 >
-                  {tech}
+                  {role}
                 </span>
               ))}
             </div>
+            {/* Bouton */}
+            {project.link === "https://mon-portfolio.com" ? null : (
+              <div className="flex gap-4 mt-auto">
+                <Link
+                  to={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 bg-[rgb(52,65,122)] hover:bg-[rgb(85,100,170)] hover:scale-105 ease-in-out transition-transform duration-200 text-white px-4 py-2 rounded-lg"
+                >
+                  <FiExternalLink className="w-4 h-4" />
+                  Accéder au site
+                </Link>
+              </div>
+            )}
           </div>
-        </section>
-        <div className="flex flex-col gap-4 my-4">
-          <h2 className="py-2 text-xl font-bold">Ce que j'ai fais:</h2>
-          <p>{project.functions}</p>
-          <div className="flex flex-wrap gap-2">
-            {project.role.map((role, index) => (
-              <span
-                key={index}
-                className=" bg-blue-50/50  hover:bg-blue-50/90 font-semibold text-[rgb(34,42,79)] px-3 py-1 rounded-lg text-[0.8rem] md:text-sm w-fit"
-              >
-                {role}
-              </span>
-            ))}
-          </div>
-          {/* Bouton */}
-          {project.link === "https://mon-portfolio.com" ? null : (
-            <div className="flex gap-4 mt-auto">
-              <Link
-                to={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 bg-[rgb(52,65,122)] hover:bg-[rgb(85,100,170)] hover:scale-105 ease-in-out transition-transform duration-200 text-white px-4 py-2 rounded-lg"
-              >
-                <FiExternalLink className="w-4 h-4" />
-                Accéder au site
-              </Link>
-            </div>
-          )}
         </div>
-      </div>
-      {/* Image Section */}
-      <div className="flex flex-col gap-4 justify-center w-full shadow-2xl rounded-lg ">
-        <img
-          src={project.imageDetail}
-          alt={project.title}
-          className="w-full mx-auto object-cover rounded h-full object-center"
-        />
-      </div>
+        {/* Image Section */}
+        <div className="flex flex-col gap-4 justify-center w-full shadow-2xl rounded-lg ">
+          <img
+            src={project.imageDetail}
+            alt={project.title}
+            className="w-full mx-auto rounded h-80 md:h-full object-cover object-center"
+          />
+        </div>
+      </section>
     </motion.div>
   );
 }
