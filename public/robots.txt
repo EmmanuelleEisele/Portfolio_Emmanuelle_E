@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.emmanuelle-eisele.com/sitemap.xml
+
+# Pages à indexer en priorité
+Allow: /home
+Allow: /about
+Allow: /project/*
+
+# Pages à ne pas indexer (optionnel)
+Disallow: /404
+Disallow: /notfound
+
+# Crawl delay (optionnel)
+Crawl-delay: 1
