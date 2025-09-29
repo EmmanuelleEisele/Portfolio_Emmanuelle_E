@@ -1,15 +1,23 @@
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
+import BackButton from "../components/BackButton";
 export default function About() {
   return (
-    <motion.div className="project-detail-page max-w-4xl mx-auto bg-gray-700 min-h-screen gap-4 text-white p-4 pt-20">
-      <section className="bg-gray-800 p-6 rounded-lg shadow-lg w-full text-center flex flex-col gap-4 mb-4">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+      exit={{ opacity: 0, y: -100 }}
+      className="project-detail-page max-w-4xl mx-auto bg-gray-700 min-h-screen gap-4 text-white p-4 pt-20 font-poppins leading-snug"
+    >
+      <BackButton />
+      <section className="bg-gray-900 p-6 rounded-lg shadow-lg w-full text-center flex flex-col gap-4 mb-4">
         <h1 className="text-4xl font-bold">Mon Profil</h1>
         <h2 className="text-xl">Emmanuelle Eiselé</h2>
         <h2 className="text-xl">Développeuse Web & Web Mobile</h2>
       </section>
       <section className="mb-4">
-        <div className="bg-gray-800 p-6 rounded-lg shadow-lg w-full  flex flex-col gap-4">
+        <div className="bg-gray-900 p-6 rounded-lg shadow-lg w-full  flex flex-col gap-4">
           <h2 className="text-2xl font-bold mb-4">À propos de moi</h2>
           <p>
             Je suis une développeuse web et mobile passionnée par la création
@@ -39,10 +47,8 @@ export default function About() {
             <span className="font-bold">passionnée, créative</span> et plus que
             tout <span className="font-bold">déterminée</span>, n'hésitez pas à
             me contacter!
-          </p>  
-          <h2 className="text-2xl font-bold my-4">
-            Soft Skills
-          </h2>
+          </p>
+          <h2 className="text-2xl font-bold my-4">Soft Skills</h2>
           {/* Soft Skills Section */}
           <div className="flex flex-wrap gap-2">
             <span className=" bg-blue-50 text-[rgb(34,42,79)] px-3 py-1 rounded-lg text-[0.8rem] md:text-sm font-semibold w-fit">
@@ -119,7 +125,7 @@ export default function About() {
               TypeScript
             </span>
             <span className=" bg-blue-50 text-[rgb(34,42,79)] px-3 py-1 rounded-lg text-[0.8rem] md:text-sm font-semibold w-fit">
-              Agile & Scrum 
+              Agile & Scrum
             </span>
             <span className=" bg-blue-50 text-[rgb(34,42,79)] px-3 py-1 rounded-lg text-[0.8rem] md:text-sm font-semibold w-fit">
               CI/CD
@@ -132,8 +138,11 @@ export default function About() {
       </section>
       {/* Timeline Section */}
       <section>
-        <div className="bg-gray-800 p-6 rounded-lg shadow-lg w-full  flex flex-col gap-4 ">
-          <h2 className="text-2xl font-bold mb-4 text-center">Expériences clés</h2>          <div class="p-4 mt-4 " id="timeline">
+        <div className="bg-gray-900 p-6 rounded-lg shadow-lg w-full  flex flex-col gap-4 ">
+          <h2 className="text-2xl font-bold mb-4 text-center">
+            Expériences clés
+          </h2>{" "}
+          <div class="p-4 mt-4 " id="timeline">
             <div class="container ">
               <div class="flex flex-col md:grid grid-cols-12 text-black">
                 <div class="flex md:contents ">
@@ -224,7 +233,7 @@ export default function About() {
                     </p>
                   </div>
                 </div>
-               
+
                 <div class="flex md:contents">
                   <div class="col-start-2 col-end-4 mr-10 md:mx-auto relative">
                     <div class="h-full w-6 flex items-center justify-center">
@@ -235,12 +244,8 @@ export default function About() {
                     </div>
                   </div>
                   <div class="bg-gray-300 col-start-4 col-end-12 p-4 rounded-xl my-4 mr-auto shadow-md w-full">
-                    <h3 class="font-semibold text-lg mb-1">
-                      Bac Littéraire
-                    </h3>
-                    <p class="leading-tight text-justify ">
-                      2013-2014
-                    </p>
+                    <h3 class="font-semibold text-lg mb-1">Bac Littéraire</h3>
+                    <p class="leading-tight text-justify ">2013-2014</p>
                   </div>
                 </div>
               </div>

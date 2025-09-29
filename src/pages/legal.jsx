@@ -1,18 +1,24 @@
 import { Link } from "react-router-dom";
-
+// eslint-disable-next-line no-unused-vars
+import { motion } from "framer-motion";
 export default function MentionsLegales() {
   return (
-    <div className="bg-gray-700 min-h-screen py-16">
+    <motion.div 
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+      exit={{ opacity: 0, y: -100 }}
+    className="bg-gray-700 min-h-screen py-16 font-poppins text-white">
       <div className="max-w-4xl mx-auto px-4">
-        <div className="bg-gray-300 rounded-2xl shadow-xl p-8 md:p-12">
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center">
+        <div className="bg-gray-900 rounded-2xl shadow-xl p-8 md:p-12">
+          <h1 className="text-3xl md:text-4xl font-bold mb-8 text-center">
             Mentions Légales
           </h1>
           
           <div className="space-y-8 leading-relaxed">
             {/* Éditeur du site */}
             <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+              <h2 className="text-2xl font-semibold e mb-4">
                 1. Éditeur du site
               </h2>
               <p className="mb-2">
@@ -31,7 +37,7 @@ export default function MentionsLegales() {
 
             {/* Hébergement */}
             <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+              <h2 className="text-2xl font-semibold  mb-4">
                 2. Hébergement
               </h2>
               <p>
@@ -45,7 +51,7 @@ export default function MentionsLegales() {
 
             {/* Propriété intellectuelle */}
             <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+              <h2 className="text-2xl font-semibold mb-4">
                 3. Propriété intellectuelle
               </h2>
               <p>
@@ -63,7 +69,7 @@ export default function MentionsLegales() {
 
             {/* Données personnelles */}
             <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+              <h2 className="text-2xl font-semibold mb-4">
                 4. Protection des données personnelles
               </h2>
               <p>
@@ -79,7 +85,7 @@ export default function MentionsLegales() {
 
             {/* Limitation de responsabilité */}
             <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+              <h2 className="text-2xl font-semibold mb-4">
                 5. Limitation de responsabilité
               </h2>
               <p>
@@ -96,7 +102,7 @@ export default function MentionsLegales() {
 
             {/* Liens externes */}
             <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+              <h2 className="text-2xl font-semibold mb-4">
                 6. Liens externes
               </h2>
               <p>
@@ -108,7 +114,7 @@ export default function MentionsLegales() {
 
             {/* Droit applicable */}
             <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+              <h2 className="text-2xl font-semibold mb-4">
                 7. Droit applicable et juridiction
               </h2>
               <p>
@@ -118,26 +124,26 @@ export default function MentionsLegales() {
             </section>
 
             {/* Contact */}
-            <section className="bg-gray-50 p-6 rounded-lg">
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+            <section className="bg-gray-50 p-6 rounded-lg text-gray-900">
+              <h2 className="text-2xl font-bold mb-4">
                 Contact
               </h2>
-              <p>
+              <p className="font-semibold">
                 Pour toute question concernant ces mentions légales, vous pouvez me contacter à :
               </p>
-              <Link to="mailto:emmanuelle.eisele@outlook.com" className="mt-2 hover:text-blue-500">
+              <Link to="mailto:emmanuelle.eisele@outlook.com" className="mt-2 font-semibold hover:text-blue-500">
                 <strong>Email :</strong> emmanuelle.eisele@outlook.com
               </Link>
             </section>
           </div>
 
           <div className="text-center mt-12">
-            <p className="text-sm text-gray-500">
+            <p className="text-sm text-gray-300">
               Dernière mise à jour : {new Date().toLocaleDateString('fr-FR')}
             </p>
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

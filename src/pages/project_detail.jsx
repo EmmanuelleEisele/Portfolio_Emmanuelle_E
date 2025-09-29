@@ -1,6 +1,7 @@
 import { Link, useParams } from "react-router-dom";
 import projectsData from "../data/projects";
 import { FiExternalLink } from "react-icons/fi";
+import BackButton from "../components/BackButton";
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 
@@ -18,7 +19,13 @@ export default function ProjectDetail() {
   }
 
   return (
-    <motion.div className="project-detail-page max-w-6xl mx-auto bg-gray-700 min-h-screen flex justify-center gap-4 text-white p-4 pt-20">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+      className="flex justify-center gap-4 flex-col md:flex-row project-detail-page max-w-6xl mx-auto bg-gray-700 min-h-screen  text-white p-4 pt-20 font-poppins leading-snug"
+    >
+      <BackButton />
       <div className="bg-gray-800 p-6 rounded-lg shadow-lg w-full  ">
         <h1 className="text-3xl font-bold text-white">{project.title}</h1>
         <p>{project.description}</p>
@@ -57,24 +64,26 @@ export default function ProjectDetail() {
               </span>
             ))}
           </div>
-        </div>
-        {/* Action buttons */}
-        <div className="flex gap-4 mt-auto">
-          <Link
-            to={project.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 bg-[rgb(34,42,79)] hover:bg-[rgb(52,65,122)] hover:scale-105 ease-in-out transition-transform duration-200 text-white px-4 py-2 rounded-lg"
-          >
-            <FiExternalLink className="w-4 h-4" />
-            Voir le projet
-          </Link>
+          {/* Bouton */}
+          {project.link === "https://mon-portfolio.com" ? null : (
+            <div className="flex gap-4 mt-auto">
+              <Link
+                to={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 bg-[rgb(52,65,122)] hover:bg-[rgb(85,100,170)] hover:scale-105 ease-in-out transition-transform duration-200 text-white px-4 py-2 rounded-lg"
+              >
+                <FiExternalLink className="w-4 h-4" />
+                Accéder au site
+              </Link>
+            </div>
+          )}
         </div>
       </div>
       {/* Image Section */}
-      <div className="flex flex-col gap-4 justify-center w-full ">
+      <div className="flex flex-col gap-4 justify-center w-full shadow-2xl rounded-lg ">
         <img
-          src={project.image}
+          src={project.imageDetail}
           alt={project.title}
           className="w-full mx-auto object-cover rounded h-full object-center"
         />

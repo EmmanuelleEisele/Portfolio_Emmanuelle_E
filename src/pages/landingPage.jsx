@@ -19,7 +19,7 @@ export default function LandingPage() {
   return (
       <motion.div 
       className="bg-gray-700 min-h-screen flex flex-col justify-center items-center relative"
-      initial={{ y: 0, opacity: 1 }}
+      initial={{ y: 0, opacity: 0 }}
       animate={{ y: exit ? -500 : 0, opacity: exit ? 0 : 1 }}
       transition={{ duration: 0.5, ease: "easeInOut" }}
       >

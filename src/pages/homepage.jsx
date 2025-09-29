@@ -6,10 +6,7 @@ import { motion } from "framer-motion";
 import { FaHandshake } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-
 export default function Home() {
-
-
   // scrolling to projects section
   const scrollToProjects = () => {
     const projectsSection = document.getElementById("projects-section");
@@ -42,9 +39,9 @@ export default function Home() {
                 <p className="w-auto text-gray-900 text-base font-medium font-['Poppins'] md:leading-9 px-1 pb-2">
                   Je suis une développeuse web et mobile passionnée par la
                   création d'expériences numériques innovantes et intuitives.
-                </p>  
+                </p>
                 <div className="flex justify-center">
-                    <Link
+                  <Link
                     to="/about"
                     className="flex flex-row justify-center items-center w-fit gap-2 px-2 py-1  bg-[rgb(34,42,79)] hover:bg-[rgb(34,32,79)]/80 rounded-md  text-white md:text-lg  font-['Poppins']"
                     title="Voir mon profil"
@@ -52,7 +49,7 @@ export default function Home() {
                     Voir mon profil
                   </Link>
                 </div>
-                
+
                 {/* Technologies animées */}
                 <div className="flex flex-col justify-center items-center md:flex-row gap-2 md:gap-9 my-4 md:my-10 font-['Poppins']">
                   <motion.div
@@ -190,7 +187,7 @@ export default function Home() {
         </div>
       </div>
       <section>
-        <div className="flex justify-center flex-col items-center my-8 bg-gray-800 text-white p-8 mx-4 rounded-2xl">
+        <div className="flex justify-center flex-col items-center my-8 bg-gray-900 text-white p-8 mx-4 rounded-2xl font-poppins">
           <motion.div
             animate={{ rotate: [0, 15, -15, 0], opacity: [1, 0.7, 0.7, 1] }}
             transition={{
