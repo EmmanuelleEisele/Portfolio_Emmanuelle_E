@@ -29,7 +29,7 @@ export default function Home() {
             <div className="bg-[#b4ccf063] mx-auto w-11/12 md:w-full relative flex flex-col justify-center sm:flex-row items-end rounded-2xl md:h-[500px]">
               <img
                 src="/images/IMG-20250922-WA0013.png"
-                alt="photo de Emmanuelle Eiselé"
+                alt="photo de profil de Emmanuelle Eiselé, développeurse web et mobile"
                 className="hidden md:block md:h-[470px] object-cover object-top "
               />
               <div className="w-full h-1/2 md:h-fit rounded-[3px]">
@@ -120,6 +120,7 @@ export default function Home() {
                   className="hover:rounded-[40%_60%_30%_70%/60%_30%_70%_40%] transition-all ease-in-out duration-[500ms] px-8 md:px-16 py-2 md:py-4 bg-[rgb(34,42,79)] rounded-md shadow-[0px_7px_30px_0px_rgba(0,0,0,0.05)] text-white text-lg md:text-xl font-medium font-['Poppins'] uppercase mb-2 md:m-4"
                   onClick={scrollToProjects}
                   title="Voir mes projets"
+                  aria-label="Voir mes projets"
                 >
                   Mes projets
                   <br />
