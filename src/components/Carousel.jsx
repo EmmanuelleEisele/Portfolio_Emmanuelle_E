@@ -30,9 +30,16 @@ export default function Carousel() {
         Découvrez une sélection de mes projets de développement web en ligne
       </p>
 
-      <div className="relative bg-white rounded-2xl shadow-xl overflow-hidden">
+      <div
+        role="region"
+        aria-label="Carrousel des projets"
+        aria-live="polite"
+        className="relative bg-white rounded-2xl shadow-xl overflow-hidden"
+      >
         {/* Navigation arrows */}
         <button
+          aria-label="Projet précédent"
+          aria-controls="carousel-content"
           onClick={prevSlide}
           className="absolute left-1 top-1/2 transform -translate-y-1/2 z-10 bg-gray-600/15 backdrop-blur-sm hover:bg-white/25 transition-all duration-200 rounded-full p-3 shadow-lg hover:shadow-xl group"
         >
@@ -47,7 +54,10 @@ export default function Carousel() {
         </button>
 
         {/* Carousel content */}
-        <div className="relative h-[520px] md:h-[500px] xl:h-[700px] overflow-hidden">
+        <div
+          id="carousel-content"
+          className="relative h-[520px] md:h-[500px] xl:h-[700px] overflow-hidden"
+        >
           {projects.map((project, index) => (
             <div
               key={project.id}
@@ -61,7 +71,7 @@ export default function Carousel() {
             >
               {/* Carousel slide content */}
               <div className="flex flex-col h-full bg-gray-300">
-                {/* Image en haut */}
+                {/* Image */}
                 <div className="w-full h-1/2 relative overflow-hidden">
                   <img
                     src={project.image}
