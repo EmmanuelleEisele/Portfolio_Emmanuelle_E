@@ -64,7 +64,6 @@ export default function LandingPage() {
           interactivity: {
             events: {
               onHover: { enable: true, mode: "repulse" },
-              onClick: { enable: true, mode: "push" },
             },
             modes: {
               repulse: { distance: 80, duration: 0.5 },
