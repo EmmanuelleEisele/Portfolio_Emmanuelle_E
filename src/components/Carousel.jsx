@@ -41,14 +41,14 @@ export default function Carousel() {
           aria-label="Projet précédent"
           aria-controls="carousel-content"
           onClick={prevSlide}
-          className="absolute left-1 top-1/2 transform -translate-y-1/2 z-10 bg-gray-600/15 backdrop-blur-sm hover:bg-white/25 transition-all duration-200 rounded-full p-3 shadow-lg hover:shadow-xl group"
+          className="absolute left-1 top-1/2 transform -translate-y-1/2 z-10 bg-gray-900/15 backdrop-blur-sm hover:bg-white/25 transition-all duration-200 rounded-full p-3 shadow-lg hover:shadow-xl group"
         >
           <BiChevronLeft className="w-6 h-6 text-gray-700 group-hover:text-white" />
         </button>
 
         <button
           onClick={nextSlide}
-          className="absolute right-1 top-1/2 transform -translate-y-1/2 z-10 bg-gray-600/15 backdrop-blur-sm hover:bg-white/25 transition-all duration-200 rounded-full p-3 shadow-lg hover:shadow-xl group"
+          className="absolute right-1 top-1/2 transform -translate-y-1/2 z-10 bg-gray-900/15 backdrop-blur-sm hover:bg-white/25 transition-all duration-200 rounded-full p-3 shadow-lg hover:shadow-xl group"
         >
           <BiChevronRight className="w-6 h-6 text-gray-700 group-hover:text-white" />
         </button>
