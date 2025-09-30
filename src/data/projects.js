@@ -4,7 +4,7 @@ export const projectsData = [
     title: "SeniorLove",
     description: "Un site de rencontres pour les + 60 ans.",
     objectif: "Projet de fin de formation réalisé en équipe et présenté lors d'une soutenance devant un jury.",
-    detail: "Développement d'une application web de rencontres destinée aux personnes de plus de 60 ans. L'application permet aux utilisateurs de créer un profil, de rechercher des correspondances et de communiquer en toute sécurité.",
+    detail: "Développement d'une application web de rencontres destinée aux personnes de plus de 60 ans. L'application permet aux utilisateurs de créer un profil, de rechercher des correspondances et de communiquer en toute sécurité. Identifiants de test : pierrette59@example.com / motdepasse : pierrettepass",
     functions: "En tant que membre de l'équipe, j'ai contribué au développement front-end et back-end de l'application. J'ai participé à la conception de la maquette, à l'intégration des fonctionnalités backend et au déploiement de l'application sur des plateformes cloud. J'ai pu mettre en place l'authentification ainsi que la sécurité de la plateforme. J'ai également assumé le rôle de Scrum Master, facilitant la communication et la collaboration au sein de l'équipe. Ce projet m'a permis de développer mes compétences en gestion de projet agile et en travail d'équipe.",
     image: "/images/seniorLove-web.png",
     imageDetail: "/images/seniorLove.png",
