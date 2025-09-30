@@ -33,10 +33,10 @@ export default function Home() {
                 className="hidden md:block md:h-[470px] object-cover object-top "
               />
               <div className="w-full h-1/2 md:h-fit rounded-[3px]">
-                <h2 className=" text-gray-900 p-2 md:p-0 text-lg md:text-3xl font-bold font-['Poppins'] md:leading-[60px]">
+                <h2 className=" text-gray-200 p-2 md:p-0 text-lg md:text-3xl font-bold font-['Poppins'] md:leading-[60px]">
                   Developpeuse Web & Mobile
                 </h2>
-                <p className="w-auto text-gray-900 text-base font-medium font-['Poppins'] md:leading-9 px-1 pb-2">
+                <p className="w-auto text-gray-200 text-base font-medium font-['Poppins'] md:leading-9 px-1 pb-2">
                   Je suis une développeuse web et mobile passionnée par la
                   création d'expériences numériques innovantes et intuitives.
                 </p>

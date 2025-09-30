@@ -24,7 +24,7 @@ export default function LandingPage() {
       transition={{ duration: 0.5, ease: "easeInOut" }}
       >
         <div className="relative">
-          <h1 className="text-2xl sm:text-2xl md:text-4xl lg:text-8xl text-gray-950 font-bold font-fascinate drop-shadow-xl p-4  rounded-xl hover:scale-105 transition-transform ease-in-out duration-300">
+          <h1 className="text-2xl sm:text-2xl md:text-4xl lg:text-8xl text-gray-200 font-bold font-fascinate drop-shadow-xl p-4  rounded-xl hover:scale-105 transition-transform ease-in-out duration-300">
             EMMANUELLE EISELÉ
           </h1>
         </div>
