@@ -9,7 +9,6 @@ import LandingPage from './pages/landingPage.jsx'
 import Contact from './pages/contact.jsx'
 import ProjectDetail from './pages/project_detail.jsx'
 import MentionsLegales from './pages/legal.jsx'
-import { SpeedInsights } from "@vercel/speed-insights/react"
 
 function AnimatedRoutes() {
   const location = useLocation()
