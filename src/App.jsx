@@ -27,7 +27,7 @@ function AnimatedRoutes() {
         <Route path="/notfound" element={<NotFound />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
-        <SpeedInsights />
+
     </AnimatePresence>
   )
 }
@@ -49,6 +49,7 @@ export default function App() {
   return (
     <Router>
       <AppContent />
+      <SpeedInsights />
     </Router>
   )
 }
