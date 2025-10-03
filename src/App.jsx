@@ -49,7 +49,6 @@ export default function App() {
   return (
     <Router>
       <AppContent />
-      <SpeedInsights />
     </Router>
   )
 }
