@@ -9,6 +9,7 @@ import LandingPage from './pages/landingPage.jsx'
 import Contact from './pages/contact.jsx'
 import ProjectDetail from './pages/project_detail.jsx'
 import MentionsLegales from './pages/legal.jsx'
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 function AnimatedRoutes() {
   const location = useLocation()
@@ -25,6 +26,7 @@ function AnimatedRoutes() {
         <Route path="/mentions-legales" element={<MentionsLegales />} />
         <Route path="/notfound" element={<NotFound />} />
         <Route path="*" element={<NotFound />} />
+        <SpeedInsights />
       </Routes>
     </AnimatePresence>
   )
