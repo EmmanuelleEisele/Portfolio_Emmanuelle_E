@@ -26,8 +26,8 @@ function AnimatedRoutes() {
         <Route path="/mentions-legales" element={<MentionsLegales />} />
         <Route path="/notfound" element={<NotFound />} />
         <Route path="*" element={<NotFound />} />
-        <SpeedInsights />
       </Routes>
+        <SpeedInsights />
     </AnimatePresence>
   )
 }
