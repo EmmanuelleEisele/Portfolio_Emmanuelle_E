@@ -28,7 +28,7 @@ export default function Home() {
           <div className="bg-gray-900 p-4 md:p-8 rounded-2xl w-11/12 md:w-full h-fit">
             <div className="bg-[#b4ccf063] mx-auto w-11/12 md:w-full relative flex flex-col justify-center sm:flex-row items-end rounded-2xl md:h-[500px]">
               <img
-                src="/images/IMG-20250922-WA0013.png"
+                src="/images/Photo_Profil_Manue.png"
                 alt="photo de profil de Emmanuelle Eiselé, développeurse web et mobile"
                 className="hidden md:block md:h-[470px] object-cover object-top "
               />
